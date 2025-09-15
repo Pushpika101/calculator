@@ -51,7 +51,10 @@ const Calculator = () => {
     }
 
     const handleDelelte = () =>{
-        setDisplayValue(displayValue.slice(0, -1));
+        if(displayValue.length == 1){
+            setDisplayValue('0')
+        }else
+        {setDisplayValue(displayValue.slice(0, -1));}
     }
 
   return (
