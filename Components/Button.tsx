@@ -2,7 +2,9 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Colors } from '@/utils/Colors'
 
-const Button = ({title ,type}: {title: string, type: 'top' | 'right' | 'middle'}) => {
+const Button = ({title ,type, onPress}: {title: string; 
+    type: 'top' | 'right' | 'middle';
+    onPress: Function}) => {
   return (
     
     <TouchableOpacity 
@@ -21,7 +23,7 @@ const Button = ({title ,type}: {title: string, type: 'top' | 'right' | 'middle'}
 
             }
         ]} 
-        onPress={() => {}}>
+        onPress={onPress}>
         <Text style={{fontSize: 44, color: type == 'middle' ? Colors.dark : Colors.light}}>{title}</Text>
     </TouchableOpacity>
     
