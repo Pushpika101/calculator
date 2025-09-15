@@ -23,6 +23,26 @@ const Calculator = () => {
 
     }
 
+    const handleEqualOparator = () =>{
+        const num1 = parseFloat(firstvalue);
+        const num2 = parseFloat(displayValue);
+
+        if(oparator === '+'){
+            setDisplayValue((num1 + num2).toString());
+        }else if(oparator === '-'){
+            setDisplayValue((num1 - num2).toString());
+        }else if(oparator === '/'){
+            setDisplayValue((num1 / num2).toString());
+        }else if(oparator === '*'){
+            setDisplayValue((num1 * num2).toString());
+        }else if(oparator === '%'){
+            setDisplayValue((num1 % num2).toString());
+        }
+
+        setOparator('');
+        setFirstValue('');
+    }
+
   return (
     <View style={styles.container}>
         <View style={styles.display}>
@@ -48,8 +68,8 @@ const Calculator = () => {
             <Button  title='+' type='right' onPress={() => handleOparatorInput('+')}/>
             <Button  title='0' type='middle' onPress={() => handleInput('0')}/>
             <Button  title='00' type='middle' onPress={() => handleInput('00')}/>
-            <Button  title='.' type='middle'/>
-            <Button  title='=' type='right'/>
+            <Button  title='.' type='middle' onPress={() => handleInput('.')}/>
+            <Button  title='=' type='right' onPress={handleEqualOparator}/>
 
         </View>
 
