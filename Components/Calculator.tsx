@@ -6,7 +6,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 const Calculator = () => {
     const [firstvalue, setFirstValue] = useState('');
     const [displayValue, setDisplayValue] = useState('0');
-    const [oparator, serOparator] = useState('')
+    const [oparator, setOparator] = useState('')
 
     const handleInput = (num: string) => {
         setDisplayValue(displayValue === '0' ? num : displayValue+ num)
@@ -16,29 +16,36 @@ const Calculator = () => {
         //     setDisplayValue(num + displayValue)
         // }
     }
+    const handleOparatorInput = (oparator: string) => {
+        setOparator(oparator);
+        setFirstValue(displayValue);
+        setDisplayValue('0');
+
+    }
 
   return (
     <View style={styles.container}>
         <View style={styles.display}>
+            <Text style={{fontSize: 30, fontWeight: '200'}}>{firstvalue + oparator}</Text>
             <Text style={{fontSize: 70, fontWeight: '400'}}>{displayValue}</Text>
         </View>
         <View style={styles.keypad}>
             <Button  title='C' type='top'/>
             <Button  title='⌫' type='top'/>
-            <Button  title='%' type='top'/>
-            <Button  title='÷' type='right'/>
+            <Button  title='%' type='top' onPress={() => handleOparatorInput('%')}/>
+            <Button  title='÷' type='right' onPress={() => handleOparatorInput('/')}/>
             <Button  title='1' type='middle' onPress={() => handleInput('1')}/>
             <Button  title='2' type='middle' onPress={() => handleInput('2')}/>
             <Button  title='3' type='middle' onPress={() => handleInput('3')}/>
-            <Button  title='x' type='right'/>
+            <Button  title='x' type='right' onPress={() => handleOparatorInput('*')}/>
             <Button  title='4' type='middle' onPress={() => handleInput('4')}/>
             <Button  title='5' type='middle' onPress={() => handleInput('5')}/>
             <Button  title='6' type='middle' onPress={() => handleInput('6')}/>
-            <Button  title='-' type='right'/>
+            <Button  title='-' type='right' onPress={() => handleOparatorInput('-')}/>
             <Button  title='7' type='middle' onPress={() => handleInput('7')}/>
             <Button  title='8' type='middle' onPress={() => handleInput('8')}/>
             <Button  title='9' type='middle' onPress={() => handleInput('9')}/>
-            <Button  title='+' type='right'/>
+            <Button  title='+' type='right' onPress={() => handleOparatorInput('+')}/>
             <Button  title='0' type='middle' onPress={() => handleInput('0')}/>
             <Button  title='00' type='middle' onPress={() => handleInput('00')}/>
             <Button  title='.' type='middle'/>
