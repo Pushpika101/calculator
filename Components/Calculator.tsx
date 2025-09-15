@@ -11,25 +11,25 @@ const Calculator = () => {
         </View>
         <View style={styles.keypad}>
             <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
-            <Button  title='C'/>
+            <Button  title='⌫'/>
+            <Button  title='%'/>
+            <Button  title='÷'/>
+            <Button  title='1'/>
+            <Button  title='2'/>
+            <Button  title='3'/>
+            <Button  title='x'/>
+            <Button  title='4'/>
+            <Button  title='5'/>
+            <Button  title='6'/>
+            <Button  title='-'/>
+            <Button  title='7'/>
+            <Button  title='8'/>
+            <Button  title='9'/>
+            <Button  title='+'/>
+            <Button  title='0'/>
+            <Button  title='00'/>
+            <Button  title='.'/>
+            <Button  title='='/>
 
         </View>
 
