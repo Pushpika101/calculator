@@ -50,6 +50,10 @@ const Calculator = () => {
 
     }
 
+    const handleDelelte = () =>{
+        setDisplayValue(displayValue.slice(0, -1));
+    }
+
   return (
     <View style={styles.container}>
         <View style={styles.display}>
@@ -58,7 +62,7 @@ const Calculator = () => {
         </View>
         <View style={styles.keypad}>
             <Button  title='C' type='top' onPress={handleClear}/>
-            <Button  title='⌫' type='top'/>
+            <Button  title='⌫' type='top' onPress={handleDelelte}/>
             <Button  title='%' type='top' onPress={() => handleOparatorInput('%')}/>
             <Button  title='÷' type='right' onPress={() => handleOparatorInput('/')}/>
             <Button  title='1' type='middle' onPress={() => handleInput('1')}/>
