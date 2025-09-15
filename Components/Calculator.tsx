@@ -1,4 +1,5 @@
 import { Colors } from '@/utils/Colors';
+import  Button  from './Button';
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
@@ -9,9 +10,27 @@ const Calculator = () => {
             <Text style={{fontSize: 70, fontWeight: '400'}}>123</Text>
         </View>
         <View style={styles.keypad}>
-            <TouchableOpacity onPress={() => {}}>
-                <Text>0</Text>
-            </TouchableOpacity>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+            <Button  title='C'/>
+
         </View>
 
       
@@ -42,8 +61,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        gap: 30,
-        padding: 30
+        gap: 20,
+        padding: 29
 
     }
 })
