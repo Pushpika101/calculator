@@ -16,10 +16,36 @@ const Calculator = () => {
         //     setDisplayValue(num + displayValue)
         // }
     }
-    const handleOparatorInput = (oparator: string) => {
-        setOparator(oparator);
-        setFirstValue(displayValue);
-        setDisplayValue('0');
+    const handleOparatorInput = (newoparator: string) => {
+        if(oparator && firstvalue !== ''){
+            const num1 = parseFloat(firstvalue)
+            const num2 = parseFloat(displayValue)
+
+            let result = 0;
+            if(oparator === '+'){
+                result = num1 + num2;
+            }else if(oparator === '-'){
+                result = num1 - num2;
+            }else if(oparator === '/'){
+                result = num1 / num2;
+            }else if(oparator === '*'){
+                result = num1 * num2;
+            }else if(oparator === '%'){
+                result = num1 % num2;
+            }
+            setFirstValue(result.toString());
+            setDisplayValue('0');
+
+        }else{
+            setFirstValue(displayValue);
+            setDisplayValue('0');
+            // setOparator(oparator);
+            // setFirstValue(displayValue);
+            // setDisplayValue('0');
+        }
+
+        setOparator(newoparator);
+        
 
     }
 
