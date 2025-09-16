@@ -1,9 +1,12 @@
 export const Colors = {
     light: '#f5f5f5',
-    dark: '#0c1a30ff',
+    dark: '#111e32ff',
+    dark2: '#000000ff',
     primary: '#d2e6e8ff',
     secondary: '#becee5ff',
+    secondary2: '#3d84e6ff',
     accent: '#c99685ff',
+    accent2: '#c73606ff',
     success: '#4caf50',
     warning: '#ff9800',
     error: '#f44336',
